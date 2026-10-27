@@ -106,7 +106,7 @@ function active(){return data.habits.find(h=>h.id===activeId)}
 function renderTabs(){
  const el=document.getElementById('tabs');el.innerHTML='';
  data.habits.forEach(h=>{const b=document.createElement('button');b.className='tab'+(h.id===activeId?' active':'');b.textContent=h.name;b.onclick=()=>{activeId=h.id;save();render()};el.appendChild(b)});
- const add=document.createElement('button');add.className='tab add';add.textContent='+ Добавить';add.onclick=()=>openHabit();el.appendChild(add);
+ const add=document.createElement('button');add.className='tab add';add.textContent='+';add.onclick=()=>openHabit();el.appendChild(add);
 }
 function renderCalendar(){
  document.getElementById('monthName').textContent=ruMonths[viewMonth]+' '+viewYear;
